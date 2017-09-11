@@ -9,9 +9,9 @@ states = requests.get("https://raw.githubusercontent.com/a1u/job-generator/maste
 cities = requests.get("https://raw.githubusercontent.com/a1u/job-generator/master/data-city").content.splitlines()
 
 #url = "https://www.careersitecloud.com/api/v1/import/55e986c70cf2bf965dabbdec/autest"
-urlpost = "https://www.dev.careersitecloud.com/api/v1/import/55e986c70cf2bf965dabbdec/autest"
-urldelete = "https://www.dev.careersitecloud.com/api/v1/import/job/{id}"
-urllist = "https://www.dev.careersitecloud.com/api/v1/import/job"
+urlpost = "https://www.careersitecloud.com/api/v1/import/55e986c70cf2bf965dabbdec/autest"
+urldelete = "https://www.careersitecloud.com/api/v1/import/job/{id}"
+urllist = "https://www.careersitecloud.com/api/v1/import/job"
 
 headers = {
    'content-type': "application/xml",
