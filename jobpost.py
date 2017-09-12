@@ -7,6 +7,8 @@ titles = requests.get("https://raw.githubusercontent.com/a1u/job-generator/maste
 countries = requests.get("https://raw.githubusercontent.com/a1u/job-generator/master/data-country").content.splitlines()
 states = requests.get("https://raw.githubusercontent.com/a1u/job-generator/master/data-state").content.splitlines()
 cities = requests.get("https://raw.githubusercontent.com/a1u/job-generator/master/data-city").content.splitlines()
+categories = requests.get("https://raw.githubusercontent.com/a1u/job-generator/master/data-category").content.splitlines()
+types = requests.get("https://raw.githubusercontent.com/a1u/job-generator/master/data-type").content.splitlines()
 
 #url = "https://www.careersitecloud.com/api/v1/import/55e986c70cf2bf965dabbdec/autest"
 urlpost = "https://www.careersitecloud.com/api/v1/import/55e986c70cf2bf965dabbdec/autest"
@@ -68,7 +70,7 @@ def post():
     job = {"address": rws(3, words),
            "applyEmail": "no-reply@aspentechlabs.com",
            "applyRedirect": "https://www.aspentechlabs.com",
-           "category": rws(2, words),
+           "category": rws(2, categories),
            "city": rws(1, cities),
            "country": rws(1, countries),
            "description": rws(200, words),
@@ -79,7 +81,7 @@ def post():
            "source": rws(1, words),
            "state": rws(2, states),
            "title": rws(1, titles),
-           "jobtype": rws(1, words),
+           "jobtype": rws(1, types),
            "postalcode": rws(1, words)
            }
     payload = {"source": {"job": job}}
