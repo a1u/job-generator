@@ -79,7 +79,7 @@ def post():
            "ref": rws(1, words),
            "salary": rws(2, words),
            "source": rws(1, words),
-           "state": rws(2, states),
+           "state": rws(1, states),
            "title": rws(1, titles),
            "jobtype": rws(1, types),
            "postalcode": random.randint(10000, 99999)
