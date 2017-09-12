@@ -82,7 +82,7 @@ def post():
            "state": rws(2, states),
            "title": rws(1, titles),
            "jobtype": rws(1, types),
-           "postalcode": random.randint(5, 5)
+           "postalcode": random.randint(10000, 99999)
            }
     payload = {"source": {"job": job}}
     payload = json2xml(payload)
